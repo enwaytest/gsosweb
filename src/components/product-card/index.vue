@@ -13,7 +13,7 @@
     </template>
     <template #status>
       <t-tag :theme="product.isSetup ? 'success' : 'default'" :disabled="!product.isSetup">{{
-        product.isSetup ? '已启用' : '已停用'
+        product.isSetup ? '认证后修改' : '未认证'
       }}</t-tag>
     </template>
     <template #content>

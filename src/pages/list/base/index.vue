@@ -3,8 +3,8 @@
     <t-card class="list-card-container" :bordered="false">
       <t-row justify="space-between">
         <div class="left-operation-container">
-          <t-button @click="handleSetupContract"> 新建合同 </t-button>
-          <t-button variant="base" theme="default" :disabled="!selectedRowKeys.length"> 导出合同 </t-button>
+          <t-button @click="handleSetupContract"> 新建报备 </t-button>
+          <t-button variant="base" theme="default" :disabled="!selectedRowKeys.length"> 导出报备 </t-button>
           <p v-if="!!selectedRowKeys.length" class="selected-count">已选{{ selectedRowKeys.length }}项</p>
         </div>
         <div class="search-input">

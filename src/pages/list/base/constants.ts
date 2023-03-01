@@ -3,21 +3,21 @@ import { PrimaryTableCol, TableRowData } from 'tdesign-vue-next';
 export const COLUMNS: PrimaryTableCol<TableRowData>[] = [
   { colKey: 'row-select', type: 'multiple', width: 64, fixed: 'left' },
   {
-    title: '合同名称',
+    title: '报备名称',
     align: 'left',
     width: 320,
     colKey: 'name',
     fixed: 'left',
   },
-  { title: '合同状态', colKey: 'status', width: 160 },
+  { title: '状态', colKey: 'status', width: 160 },
   {
-    title: '合同编号',
+    title: '报备编号',
     width: 160,
     ellipsis: true,
     colKey: 'no',
   },
   {
-    title: '合同类型',
+    title: '报备类型',
     width: 160,
     ellipsis: true,
     colKey: 'contractType',
