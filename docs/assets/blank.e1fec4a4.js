@@ -1,1 +1,0 @@
-import{_ as s,l as o,o as _,c as t,a as n}from"./index.b3d31375.js";const c={},a={class:"tdesign-wrapper"};function r(l,d){const e=o("router-view");return _(),t("div",a,[n(e)])}const i=s(c,[["render",r],["__scopeId","data-v-6d4bf486"],["__file","/Users/tzz/src/enway/gsosweb/src/layouts/blank.vue"]]);export{i as default};
