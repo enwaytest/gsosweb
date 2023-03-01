@@ -86,14 +86,14 @@ export const TABLE_COLUMNS = [
     width: '280',
     ellipsis: true,
     colKey: 'name',
-    title: '项目名称',
+    title: '客户名称',
     sorter: (a, b) => a.name.substr(10) - b.name.substr(10),
   },
   {
     width: '280',
     ellipsis: true,
     colKey: 'adminName',
-    title: '管理员',
+    title: '当前负责人',
   },
   {
     width: '280',
