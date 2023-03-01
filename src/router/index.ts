@@ -7,7 +7,7 @@ const env = import.meta.env.MODE || 'development';
 const homepageModules = import.meta.globEager('./modules/**/homepage.ts');
 
 // 导入modules非homepage相关固定路由
-const fixedModules = import.meta.globEager('./modules/**/!(homepage).ts');
+const fixedModules = import.meta.globEager('./modules/**/user.ts');
 
 // 其他固定路由
 const defaultRouterList: Array<RouteRecordRaw> = [
@@ -25,8 +25,8 @@ const defaultRouterList: Array<RouteRecordRaw> = [
 export const homepageRouterList: Array<RouteRecordRaw> = mapModuleRouterList(homepageModules);
 export const fixedRouterList: Array<RouteRecordRaw> = mapModuleRouterList(fixedModules);
 
-// export const allRoutes = [...homepageRouterList, ...fixedRouterList, ...defaultRouterList];
-export const allRoutes = [...homepageRouterList, ...defaultRouterList];
+export const allRoutes = [...homepageRouterList, ...fixedRouterList, ...defaultRouterList];
+// export const allRoutes = [...homepageRouterList, ...defaultRouterList];
 
 // 固定路由模块转换为路由
 export function mapModuleRouterList(modules: Record<string, unknown>): Array<RouteRecordRaw> {
@@ -43,19 +43,19 @@ export function mapModuleRouterList(modules: Record<string, unknown>): Array<Rou
 export const getRoutesExpanded = () => {
   const expandedRoutes = [];
 
-  // fixedRouterList.forEach((item) => {
-  //   if (item.meta && item.meta.expanded) {
-  //     expandedRoutes.push(item.path);
-  //   }
-  //   if (item.children && item.children.length > 0) {
-  //     item.children
-  //       .filter((child) => child.meta && child.meta.expanded)
-  //       .forEach((child: RouteRecordRaw) => {
-  //         expandedRoutes.push(item.path);
-  //         expandedRoutes.push(`${item.path}/${child.path}`);
-  //       });
-  //   }
-  // });
+  fixedRouterList.forEach((item) => {
+    if (item.meta && item.meta.expanded) {
+      expandedRoutes.push(item.path);
+    }
+    if (item.children && item.children.length > 0) {
+      item.children
+        .filter((child) => child.meta && child.meta.expanded)
+        .forEach((child: RouteRecordRaw) => {
+          expandedRoutes.push(item.path);
+          expandedRoutes.push(`${item.path}/${child.path}`);
+        });
+    }
+  });
   return uniq(expandedRoutes);
 };
 
