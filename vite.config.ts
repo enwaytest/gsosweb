@@ -42,10 +42,10 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     ],
 
     server: {
-      port: 3002,
+      port: 80,
       host: '0.0.0.0',
       proxy: {
-        '/api': 'http://127.0.0.1:3000/',
+        '/api': 'http://test.sehub.jp:3002/',
       },
     },
 
