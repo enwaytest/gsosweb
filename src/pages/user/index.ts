@@ -25,7 +25,7 @@ export function getFolderLineDataSet({
       left: 'center',
       bottom: '0',
       orient: 'horizontal', // legend 横向布局。
-      data: ['杯子', '茶叶', '蜂蜜', '面粉'],
+      data: ['V40', 'S50', 'S75', 'X1'],
       textStyle: {
         fontSize: 12,
         color: placeholderColor,
@@ -64,7 +64,7 @@ export function getFolderLineDataSet({
         showSymbol: true,
         symbol: 'circle',
         symbolSize: 8,
-        name: '杯子',
+        name: 'V40',
         stack: '总量',
         data: [
           getRandomArray(),
@@ -85,7 +85,7 @@ export function getFolderLineDataSet({
         showSymbol: true,
         symbol: 'circle',
         symbolSize: 8,
-        name: '茶叶',
+        name: 'S50',
         stack: '总量',
         data: [
           getRandomArray(),
@@ -106,7 +106,7 @@ export function getFolderLineDataSet({
         showSymbol: true,
         symbol: 'circle',
         symbolSize: 8,
-        name: '蜂蜜',
+        name: 'S75',
         stack: '总量',
         data: [
           getRandomArray(),
@@ -127,7 +127,7 @@ export function getFolderLineDataSet({
         showSymbol: true,
         symbol: 'circle',
         symbolSize: 8,
-        name: '面粉',
+        name: 'X1',
         stack: '总量',
         data: [
           getRandomArray(),
